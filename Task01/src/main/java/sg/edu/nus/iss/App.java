@@ -12,17 +12,14 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
     public static void main(String[] args) {
         System.out.printf("Welcome to Pokemon Gaole Legend 4 Rush 2\n" +
-                "(1) View the list of Pokemon in the selected stack\n" +
-                "(2) View unique list of Pokemon in the selected stack\n"
-                + "(3) Find next 5 stars Pokemon occurrence\n"
-                + "(4) Create new Pokemon stack and save (append) to csv file\n" + "(q) to exit the program\n");
+                "(1) View unique list of Pokemon in the selected stack\n" +
+                "(2) Find next 5 stars Pokemon occurrence\n"
+                + "(3) Create new Pokemon stack and save (append) to csv file\n"
+                + "(4) Print distinct Pokemon and cards count\n" + "(q) to exit the program\n");
 
         List<String> pokemons = new ArrayList<>();
         String input = "";
@@ -33,9 +30,13 @@ public class App {
             input = console.readLine("Enter your selection >");
 
             if (input.equals("1")) {
-                System.out.println("View unique list of Pokemon in selected stack");
-                
-            } else if (input.equals("4")) {
+                String selectedStack = "";
+                selectedStack = console.readLine("Display the list of unique Pokemon in stack (1-8) >");
+
+            } 
+
+
+            else if (input.equals("3")) {
                 String pokemonfile = "";
                 pokemonfile = console.readLine("Create a new Pokemon stack and save to a new file >");
                 String filename = console.readLine("Name of file >");
