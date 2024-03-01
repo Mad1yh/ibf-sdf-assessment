@@ -2,6 +2,7 @@ package sg.edu.nus.iss;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,6 +13,9 @@ import java.util.List;
 
 public class FileService {
     private static List<String> contents = new ArrayList<>();
+    private File respository;
+
+    
 
     public static List<String> getContents() {
         return contents;
@@ -20,6 +24,16 @@ public class FileService {
     public static void setContents(List<String> contents) {
         FileService.contents = contents;
     }
+
+
+    public File getRespository() {
+        return respository;
+    }
+
+    public void setRespository(File respository) {
+        this.respository = respository;
+    }
+
 
         public void ReadCSV (InputStream is) throws IOException{
         String item;
